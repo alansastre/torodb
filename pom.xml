@@ -235,6 +235,23 @@
             </activation>
             <build>
                 <plugins>
+                         
+                         	<plugin>
+	    <groupId>org.pitest</groupId>
+	    <artifactId>pitest-maven</artifactId>
+	    <version>1.1.9</version>
+	    <configuration>
+	        <targetClasses>
+	            <param>com.torodb.torod.*</param>
+	        </targetClasses>
+		<failWhenNoMutations>false</failWhenNoMutations>
+	            <outputFormats>
+	                <outputFormat>XML</outputFormat>
+	                <outputFormat>HTML</outputFormat>                      
+	            </outputFormats>   
+	    </configuration>
+	</plugin>
+	
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-compiler-plugin</artifactId>
